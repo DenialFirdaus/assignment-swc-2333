@@ -1,0 +1,82 @@
+/** 
+ * Program Purpose : Representing different types of flower and functionalities to manage their inventory.
+ * Programmer : Denial
+ * Date : 19 February 2024
+ */
+
+public class Flower {
+    // Attributes 
+    private String name;
+    private String color;
+    private double price;
+    private int quantity;
+    
+    // Constructors
+    public Flower() { 
+        // Default constructor 
+        // Initialize attributes with default values
+        this.name = "Unknown";
+        this.color = "No color";
+        this.price = 0.0;
+        this.quantity = 0;
+
+    }
+    
+    public Flower(String name, String color, double price, int quantity) {
+        // Parameterized contructor
+        this.name = name;
+        this.color = color;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    // Accessor methods (getters)
+    public String getName() { 
+        return name;
+    }
+    
+    public String getColor() {
+        return color;
+    }
+    
+    public double getPrice() {
+        return price;
+    }
+    
+    public int quantity() {
+        return quantity;
+    }
+
+    // Mutator methods (setters)
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+    
+    // toString() method to display flower details
+    @Override
+    public String toString() {
+        return "Flower Details: \n" +
+                "Name: " + name + "\n" + 
+                "Color: " + color + "\n" +
+                "Price: $" + price + "\n" +
+                "Quantity: " + quantity;
+    }
+    
+    // Example usage: 
+    public static void main (String[] args) {
+        Flower rose = new Flower("Rose", "Red", 12.99,20);
+        System.out.println(rose); // Display flower details using toString()
+    }
+}
